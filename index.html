@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex & Liya | Wedding</title>
+<meta name="description" content="Alex & Liya — 21 October 2026, Infant Jesus Church, Thovarayar, Idukki.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#f8f3eb;--cream:#f1e9dc;--ink:#4c4a43;--soft:#77736a;--gold:#9b8965;--sage:#77816e;--white:#fffdfa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:"Cormorant Garamond",serif;overflow-x:hidden}
+button,a{font:inherit}.grain{position:fixed;inset:0;pointer-events:none;opacity:.055;z-index:50;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.cover{height:100vh;min-height:680px;position:relative;display:grid;place-items:center;overflow:hidden;background:#e9e1d4}
+.cover-photo{position:absolute;inset:0;background:url("couple.png") center 34%/cover no-repeat;filter:saturate(.78);transform:scale(1.03)}
+.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(34,33,29,.18),rgba(34,33,29,.08) 45%,rgba(34,33,29,.58))}
+.cover-content{position:relative;z-index:2;text-align:center;color:white;text-shadow:0 2px 22px rgba(0,0,0,.22)}
+.smallcaps{font:500 10px "DM Sans",sans-serif;letter-spacing:5px;text-transform:uppercase}
+.cover h1{font:400 clamp(82px,15vw,170px)/.78 "Great Vibes",cursive;margin:30px 0 25px}
+.cover-date{font-size:22px;letter-spacing:2px}.enter{margin-top:35px;border:1px solid rgba(255,255,255,.75);background:rgba(255,255,255,.12);color:#fff;border-radius:50px;padding:14px 26px;letter-spacing:2px;font:500 10px "DM Sans",sans-serif;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
+.envelope{position:fixed;z-index:100;inset:0;background:var(--ivory);display:grid;place-items:center;transition:opacity 1s,visibility 1s}
+.envelope.hide{opacity:0;visibility:hidden;pointer-events:none}
+.env-wrap{width:min(410px,84vw);text-align:center}.env-label{font:500 10px "DM Sans";letter-spacing:4px;text-transform:uppercase;color:var(--soft);margin-bottom:28px}
+.env{height:260px;position:relative;background:#eee5d6;box-shadow:0 30px 80px rgba(71,58,38,.18);overflow:hidden}
+.env:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 49%,#ded2c0 50%,transparent 51%),linear-gradient(35deg,transparent 49%,#ded2c0 50%,transparent 51%)}
+.flap{position:absolute;z-index:3;left:0;top:0;width:0;height:0;border-left:205px solid transparent;border-right:205px solid transparent;border-top:125px solid #e5dac9;transform-origin:50% 0;transition:transform .9s}
+.seal{position:absolute;z-index:5;left:50%;top:112px;transform:translate(-50%,-50%);width:55px;height:55px;border-radius:50%;background:#9a8a69;color:#fff;display:grid;place-items:center;font:28px "Great Vibes";box-shadow:0 8px 20px rgba(65,53,36,.15)}
+.env.open .flap{transform:rotateX(180deg)}.env.open .seal{opacity:0}
+.open-btn{margin-top:25px;border:0;background:var(--sage);color:#fff;padding:13px 26px;border-radius:40px;font:500 10px "DM Sans";letter-spacing:2px;text-transform:uppercase;cursor:pointer}
+section{padding:105px 20px}.center{max-width:1000px;margin:auto;text-align:center}
+.script{font:400 clamp(54px,8vw,88px)/1 "Great Vibes",cursive;color:#4f4d46}
+.lead{font-size:22px;line-height:1.45;color:var(--soft);max-width:650px;margin:22px auto}
+.divider{display:flex;align-items:center;gap:18px;justify-content:center;color:var(--gold);margin:25px 0}.divider:before,.divider:after{content:"";width:100px;height:1px;background:#d5cab8}
+.photo-section{background:#eee7dc}.main-photo{width:min(680px,94vw);margin:35px auto 0;display:block;box-shadow:0 25px 70px rgba(68,55,38,.16)}
+.invite-section{background:#f7f1e8}.invitation{width:min(760px,100%);margin:35px auto 0;background:white;padding:12px;box-shadow:0 25px 70px rgba(68,55,38,.12)}.invitation img{width:100%;display:block}
+.date-row{display:flex;justify-content:center;gap:0;margin:35px auto;max-width:720px;border-top:1px solid #d5cab8;border-bottom:1px solid #d5cab8}
+.date-row div{flex:1;padding:20px 10px}.date-row div+div{border-left:1px solid #d5cab8}.date-row b{display:block;font-size:24px;font-weight:500}.date-row span{font:9px "DM Sans";letter-spacing:2px;text-transform:uppercase;color:var(--soft)}
+.timeline{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:850px;margin:45px auto}.event{background:var(--white);padding:35px 25px;border:1px solid #ded4c4}.event .icon{font-size:30px}.event h3{font-size:32px;font-weight:400;margin:10px}.event p{font-size:19px;line-height:1.45;color:var(--soft);margin:0}
+.map{display:inline-block;margin-top:17px;border:1px solid var(--gold);border-radius:30px;padding:10px 19px;text-decoration:none;font:10px "DM Sans";letter-spacing:1.5px}
+.gallery{display:grid;grid-template-columns:1.35fr .65fr;gap:15px;max-width:900px;margin:40px auto}.gallery figure{margin:0;overflow:hidden;background:#eee}.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}.gallery img:hover{transform:scale(1.035)}.gallery .big{grid-row:span 2;min-height:500px}.gallery .small{min-height:242px}
+.count{display:grid;grid-template-columns:repeat(4,1fr);max-width:650px;margin:35px auto;gap:10px}.counter{background:var(--white);border:1px solid #ddd3c3;padding:18px 5px}.counter b{font-size:35px;font-weight:400;display:block}.counter span{font:9px "DM Sans";letter-spacing:2px;color:var(--soft)}
+.final{background:#e9e1d5;padding-bottom:70px}.qr{width:145px;background:white;padding:8px;margin:30px auto 10px}.qr img{display:block;width:100%}
+.music{position:fixed;right:20px;bottom:20px;z-index:60;width:55px;height:55px;border:1px solid rgba(255,255,255,.65);border-radius:50%;background:rgba(75,75,67,.82);color:white;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.18);font-size:21px}.music.playing{animation:spin 4s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .9s,transform .9s}.reveal.show{opacity:1;transform:none}
+footer{text-align:center;padding:25px;font:9px "DM Sans";letter-spacing:3px;color:var(--soft)}
+@media(max-width:680px){.cover{min-height:620px}.date-row{display:grid;grid-template-columns:1fr}.date-row div+div{border-left:0;border-top:1px solid #d5cab8}.timeline{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.gallery .big{grid-row:auto;min-height:400px}.gallery .small{min-height:250px}.count{grid-template-columns:repeat(2,1fr)}section{padding:75px 15px}.env{height:220px}.flap{border-left-width:42vw;border-right-width:42vw;border-top-width:105px}.seal{top:105px}}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<div class="envelope" id="envelope">
+  <div class="env-wrap">
+    <div class="env-label">You are cordially invited</div>
+    <div class="env" id="env"><div class="flap"></div><div class="seal">A ♥ L</div></div>
+    <button class="open-btn" id="open">Open Invitation</button>
+  </div>
+</div>
+
+<header class="cover">
+  <div class="cover-photo"></div>
+  <div class="cover-content">
+    <div class="smallcaps">Together with their families</div>
+    <h1>Alex &amp; Liya</h1>
+    <div class="cover-date">21 · 10 · 2026 &nbsp; | &nbsp; 11:30 AM</div>
+    <button class="enter" onclick="document.getElementById('welcome').scrollIntoView()">Our story ↓</button>
+  </div>
+</header>
+
+<main>
+<section id="welcome">
+  <div class="center reveal">
+    <div class="script">A new chapter begins</div>
+    <div class="divider">♥</div>
+    <p class="lead">With great joy, we invite you to join us as we begin a new chapter of life together.</p>
+    <p style="font-size:19px;color:var(--soft);">“God has joined together; let no one separate.”<br><small>Mark 10:9</small></p>
+  </div>
+</section>
+
+<section class="photo-section">
+  <div class="center reveal">
+    <div class="script">Together</div>
+    <p class="lead">Two hearts, one beautiful journey.</p>
+    <img class="main-photo" src="couple.png" alt="Alex and Liya">
+  </div>
+</section>
+
+<section class="invite-section">
+  <div class="center reveal">
+    <div class="script">The Invitation</div>
+    <p class="lead">A little glimpse of our special day</p>
+    <div class="invitation"><img src="invitation.png" alt="Alex and Liya wedding invitation"></div>
+  </div>
+</section>
+
+<section>
+  <div class="center reveal">
+    <div class="script">Save the Date</div>
+    <div class="date-row">
+      <div><span>Day</span><b>Wednesday</b></div>
+      <div><span>Date</span><b>21 October 2026</b></div>
+      <div><span>Time</span><b>11:30 AM</b></div>
+    </div>
+    <div class="count">
+      <div class="counter"><b id="d">--</b><span>DAYS</span></div>
+      <div class="counter"><b id="h">--</b><span>HOURS</span></div>
+      <div class="counter"><b id="m">--</b><span>MINUTES</span></div>
+      <div class="counter"><b id="s">--</b><span>SECONDS</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="photo-section">
+  <div class="center reveal">
+    <div class="script">Our Moments</div>
+    <p class="lead">A few moments from our journey.</p>
+    <div class="gallery">
+      <figure class="big"><img src="couple.png" alt="Alex and Liya together"></figure>
+      <figure class="small"><img src="invitation.png" alt="Wedding invitation"></figure>
+      <figure class="small" style="display:grid;place-items:center;background:#e4dccf;">
+        <div style="text-align:center;padding:30px;"><div class="script" style="font-size:54px;">Alex &amp; Liya</div><div class="smallcaps" style="color:var(--soft);margin-top:10px;">21 October 2026</div></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="center reveal">
+    <div class="script">The Day</div>
+    <div class="timeline">
+      <div class="event"><div class="icon">⛪</div><h3>Wedding Ceremony</h3><p>11:30 AM<br>Infant Jesus Church<br>Thovarayar, Idukki</p><a class="map" target="_blank" href="https://maps.app.goo.gl/xN2fCo2gHT9JsVhNA">OPEN LOCATION</a></div>
+      <div class="event"><div class="icon">🍽</div><h3>Lunch</h3><p>Following the ceremony<br>Church Parish Hall<br>Thovarayar</p><a class="map" target="_blank" href="https://maps.app.goo.gl/xN2fCo2gHT9JsVhNA">VIEW LOCATION</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="center reveal">
+    <div class="script">We would love to have you with us</div>
+    <p class="lead">Your presence will be a blessing to us on this special day.</p>
+    <div class="qr"><img src="location-qr.png" alt="Wedding location QR code"></div>
+    <div class="smallcaps" style="color:var(--soft);">Scan for Location</div>
+    <p style="font-size:19px;">Infant Jesus Church, Thovarayar<br>Idukki, Kerala 685608</p>
+    <a class="map" target="_blank" href="https://maps.app.goo.gl/xN2fCo2gHT9JsVhNA">OPEN GOOGLE MAPS</a>
+    <div style="margin-top:55px;" class="script">Alex &amp; Liya</div>
+  </div>
+</section>
+</main>
+
+<button class="music" id="music" aria-label="Play wedding music">♪</button>
+<audio id="audio" loop preload="auto" src="wedding-music.wav"></audio>
+<footer>21 · 10 · 2026 &nbsp; • &nbsp; WITH LOVE</footer>
+
+<script>
+const open=document.getElementById('open'), env=document.getElementById('env'), envelope=document.getElementById('envelope'), audio=document.getElementById('audio'), music=document.getElementById('music');
+open.onclick=async()=>{env.classList.add('open'); setTimeout(()=>envelope.classList.add('hide'),900); try{await audio.play();music.classList.add('playing');}catch(e){}};
+music.onclick=async()=>{if(audio.paused){await audio.play();music.classList.add('playing')}else{audio.pause();music.classList.remove('playing')}};
+
+const target=new Date('2026-10-21T11:30:00+05:30').getTime();
+function clock(){let x=Math.max(0,target-Date.now());let d=Math.floor(x/86400000);x%=86400000;let h=Math.floor(x/3600000);x%=3600000;let m=Math.floor(x/60000);x%=60000;let s=Math.floor(x/1000);document.getElementById('d').textContent=String(d).padStart(2,'0');document.getElementById('h').textContent=String(h).padStart(2,'0');document.getElementById('m').textContent=String(m).padStart(2,'0');document.getElementById('s').textContent=String(s).padStart(2,'0')}clock();setInterval(clock,1000);
+
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+</script>
+</body>
+</html>
